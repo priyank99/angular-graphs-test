@@ -14,16 +14,6 @@ export class ChartComponent implements OnInit {
     let points = [];
     let csvLines = [];
     let dpsLength = 0;
-    let chart = new CanvasJS.Chart("chartContainer", {
-      exportEnabled: true,
-      title: {
-        text: "Live Chart with Data-Points from External CSV"
-      },
-      data: [{
-        type: "spline",
-        dataPoints: dataPoints,
-      }]
-    });
 
     function getSubsGapDataPointsFromCSV(csv) {
       var dataPoints = csvLines = points = [];
